@@ -11,12 +11,12 @@ import lombok.NoArgsConstructor;
 public class User {
 
 
-	private Long id;
+    private Long id;
     private String firstName;
     private String lastName;
     private String email;
     private String location;
-	//private Date createdAt;
-	//private Date updatedAt;
+    private Date createdAt;
+    private Date updatedAt;
 
 }
