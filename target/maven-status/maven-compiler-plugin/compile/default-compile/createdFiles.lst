@@ -1,0 +1,6 @@
+com/agcoassignment/chatbotservice/controller/UserClientController.class
+com/agcoassignment/chatbotservice/ChatbotServiceApplication.class
+com/agcoassignment/chatbotservice/exception/UserExceptionHandler.class
+com/agcoassignment/chatbotservice/config/WebClientConfig.class
+com/agcoassignment/chatbotservice/model/User.class
+com/agcoassignment/chatbotservice/service/UserClientService.class
