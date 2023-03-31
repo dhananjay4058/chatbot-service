@@ -4,14 +4,12 @@ import java.util.List;
 
 import org.springframework.web.service.annotation.GetExchange;
 import org.springframework.web.service.annotation.HttpExchange;
-
 import com.agcoassignment.chatbotservice.model.User;
-import com.agcoassignment.chatbotservice.util.Constants;
 
-@HttpExchange(Constants.EXCHANGE_API_PATH)
+@HttpExchange("/user-service/v1")
 public interface UserClientService {
 	
-	@GetExchange(Constants.GET_ALL_USER_API)
+	@GetExchange("/users")
     List<User> getUserDetails();
 
 }

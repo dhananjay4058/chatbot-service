@@ -12,10 +12,9 @@ import org.springframework.web.bind.annotation.RestController;
 import com.agcoassignment.chatbotservice.model.User;
 import com.agcoassignment.chatbotservice.restservice.FeignClientRestService;
 import com.agcoassignment.chatbotservice.restservice.UserClientService;
-import com.agcoassignment.chatbotservice.util.Constants;
 
 @RestController
-@RequestMapping(Constants.CHATBOT_REQUEST_MAPPING_PATH)
+@RequestMapping("chatbot-service/v1")
 public class UserClientController {
 	
 	private static final Logger log = LoggerFactory.getLogger(UserClientController.class);
@@ -26,14 +25,14 @@ public class UserClientController {
 	private FeignClientRestService feignClientRestService;
 	
 	
-	@GetMapping("/web-client")
+	@GetMapping("/web-client/users")
 	List<User> getUserDetails(){
     	Optional<List<User>> optionalUserList = Optional.ofNullable(clientService.getUserDetails());
         log.info("List of All User Data using webclient users:{}",optionalUserList.get());
 		return optionalUserList.get();
 	}
 	
-	@GetMapping("/feign-client")
+	@GetMapping("/feign-client/users")
 	List<User> getAllUser(){
     	Optional<List<User>> optionalUserList = Optional.ofNullable(feignClientRestService.getAllUser());
         log.info("List of All User Data using feign client users:{}",optionalUserList.get());
